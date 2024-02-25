@@ -1,0 +1,49 @@
+@startuml
+Course o-"1..*" Instructor
+Course o-"1..*" TextBook
+
+class Course{
+name: String
+instructors: Instructor[1..*]
+textbooks: TextBook[1..*]
+
++course(): void
++getName(): String
++setName(name: String):
++getInstructors(): Insructor[1..*]
++setInstructor(instructor: Instructor): void
++getTextbooks(): Textbook[1..*]
++setTextbook(Textbook textbook): void
++toString(): String
++printCourse(): void
+}
+
+class Instructor{
+firstName: String
+lastName: String
+officeNumber: String
+
++getFirstName(): String
++setFirstName(firstName: String): void
++getLastName(): String
++setLastName(lastName: String): void
++getOfficeNumber(): String
++setOfficeNumber(officeNumber: String): void
++toString(): String
+}
+
+class TextBook{
+title: String
+author: String
+publisher: String
+
++getTitle(): String
++setTitle(title String): void
++getAuthor(): String
++setAuthor(author: String): void
++getPublisher(): String
++setPublisher(publisher: String): void
++toString(): String
+
+}
+@enduml
